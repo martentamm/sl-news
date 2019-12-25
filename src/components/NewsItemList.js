@@ -39,7 +39,7 @@ export default class NewsItemList extends Component {
               this.state.itemList.map(item => {
                 return (
                   <div key={item.id} className='news-item'>
-                    <Link to={{ pathname: `/news/${item.id}`, state: this.state, item: item}} className="link" >
+                    <Link to={{ pathname: `/${item.id}`, state: this.state, item: item}} className="link" >
                       <img src={item.img} alt='' />
                       <p>{item.title}</p>
                     </Link>

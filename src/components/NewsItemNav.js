@@ -14,7 +14,7 @@ class NewsItemNav extends Component {
   render() {
     return (
       <nav className='item-page-nav'>
-        <Link to="/news/" state={this.state}>
+        <Link to="/" state={this.state}>
           <img src={require("../img/backarrow.png")} alt="backarrow-icon" className="ico" />
         </Link>
         <p className='nav-title'>News Reader</p>
