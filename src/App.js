@@ -4,6 +4,7 @@ import NewsItemList from './components/NewsItemList';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NewsItemData from './components/NewsItemData'
 import NewsItemPage from './components/NewsItemPage';
+import UnknownPage from './components/UnknownPage';
 class App extends React.Component {
 
 
@@ -32,10 +33,11 @@ class App extends React.Component {
         <Router >
           <Switch>
 
-            <Route exact path='/' render={props => (
+            <Route exact path="/" render={props => (
               <NewsItemList parentProps={this.state} {...props} />
             )}></Route>
-            <Route exact path='/:id' parentProps={this.state} component={NewsItemPage}></Route>
+            <Route path="/news/:id" parentProps={this.state} component={NewsItemPage}></Route>
+            <Route path="*"  component={UnknownPage}></Route>
 
           </Switch>
         </Router>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import NewsItemNav from './NewsItemNav';
 import './NewsItem.css'
-import { Link } from 'react-router-dom';
+
+
 
 
 export default class NewsItemPage extends Component {
@@ -18,18 +19,6 @@ export default class NewsItemPage extends Component {
 
 
     render() {
-
-        this.state.itemList.map(item => {
-            return (
-                <div key={item.id} className='news-item'>
-                    <Link to={{ pathname: `/${item.id}`, state: this.state, item: item }} className="link" >
-                        <img src={item.img} alt='' />
-                        <p>{item.title}</p>
-                    </Link>
-                </div>
-            );
-        })
-
         var item = this.props.location.item;
 
 
